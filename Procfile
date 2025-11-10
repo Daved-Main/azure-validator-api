@@ -1,3 +1,1 @@
-web: uvicorn app:app --host 0.0.0.0 --port $PORT --workers 1 --timeout-keep-alive 120
-
-# Using uvicorn for ASGI support with FastAPI
+web: uvicorn app:app --host 0.0.0.0 --port  --workers 1
