@@ -28,7 +28,7 @@ class ErrorResponse(BaseModel):
     error_code: str
     details: str = None
 
-@app.post("/api/validar-vehiculo", responses={
+@app.post("/api/validar-vehiculo", response_model=dict, responses={
     400: {"model": ErrorResponse, "description": "Error en la solicitud"},
     500: {"model": ErrorResponse, "description": "Error interno del servidor"},
     503: {"model": ErrorResponse, "description": "Servicio de IA no disponible"}
