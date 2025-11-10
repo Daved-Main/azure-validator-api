@@ -5,6 +5,7 @@ from src.utils import limpiar_json_markdown
 import json
 import logging
 import traceback
+from fastapi.responses import JSONResponse  # ✅ AGREGAR ESTE IMPORT
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)
@@ -91,7 +92,7 @@ async def validar_vehiculo_endpoint(request: ValidationRequest):
             # Agregar metadata
             resultado["metadata"] = {
                 "mode": request.mode,
-                "timestamp": "2024-01-01T00:00:00Z",  # Puedes usar datetime.now().isoformat()
+                "timestamp": "2024-01-01T00:00:00Z",
                 "version": "1.0.0"
             }
             return resultado
