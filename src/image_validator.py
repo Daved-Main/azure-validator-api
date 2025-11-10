@@ -6,7 +6,7 @@ import base64
 import json
 import traceback
 
-logger = logging.getLogger(_name_)
+logger = logging.getLogger(__name__)
 
 def validar_vehiculo(vehicle_img_b64: str, plate_img_b64: str, modo="estricto"):
     openai = get_client()

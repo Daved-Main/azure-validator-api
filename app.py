@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from src.image_validator import validar_vehiculo
 from src.utils import limpiar_json_markdown
 import json
+import os
 import logging
 import traceback
 from fastapi.responses import JSONResponse
@@ -10,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # Configurar logging
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(_name_)
+logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="Validador de Vehículos - Azure GPT-4o",
@@ -259,6 +260,6 @@ async def not_found_handler(request, exc):
         }
     )
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
