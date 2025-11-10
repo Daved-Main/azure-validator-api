@@ -1,0 +1,24 @@
+# .gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+.venv
+.env.local
+.env.production
+*.log
+.DS_Store
+.coverage
+.pytest_cache/
+.mypy_cache/
+*.sqlite3
+instance/
+.webassets-cache
+.coverage
+.pytest_cache/
+.mypy_cache/
